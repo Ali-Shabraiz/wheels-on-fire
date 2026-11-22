@@ -1,0 +1,125 @@
+* {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+         :root {
+            --primaryColor: red;
+        }
+        .main {
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)), url("../assets/site/home-hero.jpg");
+            background-size: cover;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            position: relative;
+            height: 100%;
+        }
+          .hero-section .content {
+            height: 100%;
+            padding: 150px 50px;
+            /* display: flex; */
+            /* flex-direction: c; */
+        }
+
+        .hero-section .content h2 {
+            text-transform: uppercase;
+            color: var(--primaryColor);
+            position: relative;
+            font-size: 1.1em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 6px;
+        }
+.hero-section .content h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 10px;
+            /* border-radius: 50%; */
+            background-color: var(--primaryColor);
+
+        }
+        .hero-section .content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -2px;
+
+            /* font-family: "Playfair Display", serif; */
+            /* line-height: 0.8em; */
+            color: white;
+
+            /* font-size: 5em; */
+            font-weight: 500;
+        }
+         .hero-section .content p {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .hero-section img {
+            width: 550px;
+            right: 150px;
+            margin-top: 150px;
+            align-self: center;
+            /* margin-top: 100px; */
+            position: absolute;
+            /* background-color: red; */
+            /* margin-right: 50px; */
+        }
+        .hero-section .content .buttons {
+            display: flex;
+            margin-top: 30px;
+            /* scale: 1.5; */
+            gap: 5px;
+        }
+         .hero-section .content .buttons button {
+            border-radius: 30px;
+            border: none;
+            background: transparent;
+            color: white;
+            /* border: none; */
+            height: 40px;
+            
+            padding: 0 20px;
+            font-weight: 700;
+            font-size: 1.3em;
+            width: max-content;
+            font-weight: 600;
+        }
+         .hero-section .content .buttons button:nth-child(2) .fa{
+            height: 40px;
+            border-radius: 50%;
+            width: 40px;
+            font-size: 16px;
+            aspect-ratio: 1;
+            /* background-color: red; */
+            border: 1px solid white;
+            align-content: center;
+            text-align: center;
+            margin-right: 5px;
+        
+
+        }
+        .hero-section .content .buttons .primaryColorButton {
+            background-color: var(--primaryColor) !important;
+            color: white;
+            font-size: medium;
+            border: none;
+        }
