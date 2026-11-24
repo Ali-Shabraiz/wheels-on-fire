@@ -506,19 +506,14 @@ footer .content .socialmediaicons li {
     border-radius: 10px;
 
 }
-
-.imageAndForm .contactform h3,
-.whyUs h3,
-footer h3 {
+  h3 {
     font-size: 25px;
     position: relative;
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.imageAndForm .contactform h3::after,
-.whyUs h3::after,
-footer h3::after {
+ h3::after {
     content: '';
     position: absolute;
     height: 5px;
@@ -594,7 +589,7 @@ footer .content form input {
 .aboutUs {
     display: flex;
 }
-
+.achievements,
 .whyUs {
     width: 100%;
     display: grid;
@@ -602,7 +597,7 @@ footer .content form input {
     grid-template-rows: repeat(1, 1fr);
     gap: 15px;
 }
-
+.achievements .item,
 .whyUs .item {
     padding: 10px;
     border-radius: 10px;
@@ -613,7 +608,7 @@ footer .content form input {
     flex-direction: column;
     gap: 10px;
 }
-
+.achievements .item:has(h4),
 .whyUs .item:has(span.icon) {
     display: flex;
     justify-content: center;
@@ -631,7 +626,7 @@ footer .content form input {
     height: 45px;
     border-radius: 50%;
 }
-
+.achievements .item:first-child,
 .whyUs .item:first-child {
     box-shadow: none;
     border: none;
@@ -643,6 +638,34 @@ footer .content form input {
     opacity: 0.5;
     font-size: 0.9em;
 }
+.achievements{
+    padding: 20px;
+    box-shadow: 0 0 10px var(--silver);
+    border-radius: 10px;
+    color: var(--wte);
+    background-color: var(--primaryColor);
+}
+.achievements h3::after{
+    background-color: var(--wte);
+}
+.achievements .item{
+    border-left: 1px solid var(--wte);
+    justify-content: flex-start;
+    border: none;
+    border-radius: 0;
+    border-left: solid;
+    box-shadow: none;
+
+}
+.achievements .item h4{
+    font-size: 2em;
+}
+.achievements .item p{
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+    
+
 
 
 /* .whyUs .item {
