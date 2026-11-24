@@ -4,23 +4,29 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-::selection{
+
+::selection {
     background-color: var(--primaryColor);
 }
+
 :root {
     --primaryColor: #E60000;
     --wte: #fff;
     --blk: #0A0A0C;
     --silver: #D1D5DB;
 }
-body{
+
+body {
     background-color: var(--wte);
 }
-input:focus,textarea:focus{
+
+input:focus,
+textarea:focus {
     border-color: var(--silver);
     outline-color: var(--silver);
 }
-.primarColored{
+
+.primarColored {
     color: var(--primaryColor);
 }
 
@@ -35,7 +41,8 @@ input:focus,textarea:focus{
     background-repeat: no-repeat;
     background-position: center;
 }
-.main.h-max-content{
+
+.main.h-max-content {
     height: max-content;
 }
 
@@ -66,8 +73,9 @@ h2 {
     font-weight: 400;
     letter-spacing: 6px;
     margin-top: 20px;
-    
+
 }
+
 .freturedProducts .item h3::after,
 h2::after {
     content: '';
@@ -81,6 +89,7 @@ h2::after {
     background-color: var(--primaryColor);
 
 }
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -154,7 +163,7 @@ h1.hero-heading {
 
 }
 
- .primaryColorButton {
+.primaryColorButton {
     background-color: var(--primaryColor) !important;
     color: var(--wte);
     font-size: medium;
@@ -186,9 +195,35 @@ nav ul {
     display: flex;
     gap: 20px;
     list-style-type: none;
-    color: #fff;
     font-size: 14px;
 }
+nav ul a{
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
+nav ul a::after{
+    content: '';
+    transition: inherit;
+    position: absolute;
+    height: 2px;
+    background-color: var(--primaryColor);
+    width: 0;
+    margin: auto;
+    bottom: -4px;
+    left: 0;
+}
+nav ul li.active a,
+nav ul a:hover{
+    color: var(--primaryColor);
+}
+nav ul li.active a::after,
+nav ul a:hover::after{
+    width: 100%;
+}
+
 
 nav .buttons {
     display: flex;
@@ -227,6 +262,7 @@ nav .buttons button {
 .padding-20 {
     padding: 5px 20px;
 }
+
 .contactDetails .item,
 .freturedProducts .item {
     position: relative;
@@ -238,10 +274,12 @@ nav .buttons button {
     overflow: hidden;
     /* padding: 20px; */
 }
-.contactDetails{
+
+.contactDetails {
     gap: 20px;
 }
-.contactDetails .item{
+
+.contactDetails .item {
     /* background-color: var(--silver); */
     border-radius: 10px;
     padding: 15px 10px;
@@ -253,7 +291,8 @@ nav .buttons button {
     gap: 10px;
     align-items: flex-start;
 }
-.contactDetails .item .icon{
+
+.contactDetails .item .icon {
     width: 50px;
     height: 50px;
     background-color: var(--primaryColor);
@@ -263,13 +302,15 @@ nav .buttons button {
     justify-content: center;
     color: var(--wte);
 }
-.contactDetails .item .content{
+
+.contactDetails .item .content {
     font-size: 14px;
     font-weight: 600;
     padding-top: 5px;
     color: var(--blk);
 }
-.contactDetails .item .content .light{
+
+.contactDetails .item .content .light {
     font-size: 12px;
     font-weight: 400;
     opacity: 0.6;
@@ -283,6 +324,7 @@ nav .buttons button {
     border-radius: 10px;
     position: relative;
 }
+
 /* .freturedProducts .item img::after, */
 /* .freturedProducts .item img::before{
     content: '';
@@ -310,27 +352,33 @@ nav .buttons button {
     color: var(--blk);
     letter-spacing: 2px;
 }
-.freturedProducts .item h3::after{
+
+.freturedProducts .item h3::after {
     background-color: var(--blk);
 }
-.freturedProducts .item .carDetails{
+
+.freturedProducts .item .carDetails {
     font-size: 12px;
     color: var(--silver);
 }
-.freturedProducts .item strong::before{
+
+.freturedProducts .item strong::before {
     content: '$';
 }
-.freturedProducts .item strong{
+
+.freturedProducts .item strong {
     font-family: 'Montserrat', sans-serif;
     color: var(--primaryColor);
     font-size: 1.5em;
 }
-.freturedProducts .item .flex-box{
+
+.freturedProducts .item .flex-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.freturedProducts .item button{
+
+.freturedProducts .item button {
     height: 35px;
     width: 35px;
     background-color: var(--primaryColor);
@@ -339,9 +387,9 @@ nav .buttons button {
     border: none;
 }
 
-footer{
+footer {
     background-color: var(--blk);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),black), url('../assets/site/footer-bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), black), url('../assets/site/footer-bg.png');
     background-size: cover;
     background-position: cover;
     padding: 20px;
@@ -349,13 +397,14 @@ footer{
 
 }
 
-footer .content{
+footer .content {
     display: flex;
     list-style-type: none;
     width: 100%;
     justify-content: space-between;
 }
-footer .content > li{
+
+footer .content>li {
     border-left: 1px solid var(--wte);
     padding: 0 20px;
     /* width: 100%; */
@@ -364,16 +413,19 @@ footer .content > li{
     min-width: 200px;
     /* max-width: 400px; */
 }
-footer .content li p{
+
+footer .content li p {
     width: 400px;
     text-align: justify;
 }
-footer .content .socialmediaicons{
+
+footer .content .socialmediaicons {
     display: flex;
     gap: 10px;
     padding: 0;
 }
-footer .content .socialmediaicons li{
+
+footer .content .socialmediaicons li {
     width: 30px;
     height: 30px;
     align-content: center;
@@ -383,6 +435,7 @@ footer .content .socialmediaicons li{
     background-color: var(--wte);
     border-radius: 50%;
 }
+
 .aboutUs,
 .imageAndForm {
     display: flex;
@@ -391,45 +444,54 @@ footer .content .socialmediaicons li{
     position: relative;
     width: 100%;
 }
+
 .aboutUs img,
-.imageAndForm img{
+.imageAndForm img {
     border-radius: 10px;
     max-height: 450px;
 }
-.aboutUs .content p{
+
+.aboutUs .content p {
     margin: 10px 0;
     text-align: justify;
 }
-.aboutUs .content button{
+
+.aboutUs .content button {
     height: 30px;
     padding: 5px 10px;
     border-radius: 10px;
 }
+
 .imageAndForm .contactform {
     /* min-width: 400PX; */
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--silver);
 }
- .imageAndForm .contactform fieldset{
+
+.imageAndForm .contactform fieldset {
     display: flex;
     gap: 10px;
     border: none;
- } 
+}
+
 .imageAndForm .contactform fieldset .col {
     width: 50%;
 }
-.imageAndForm .contactform fieldset .col label{
+
+.imageAndForm .contactform fieldset .col label {
     font-weight: 600;
 }
- .imageAndForm .contactform fieldset .col input{
+
+.imageAndForm .contactform fieldset .col input {
     margin: 5px 0;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--silver);
     width: 100%;
- }
-.imageAndForm .contactform textarea{
+}
+
+.imageAndForm .contactform textarea {
     resize: none;
     border: 1px solid var(--silver);
     width: 100%;
@@ -437,23 +499,26 @@ footer .content .socialmediaicons li{
     padding: 10px;
     border-radius: 10px;
 }
-.imageAndForm .contactform button{
+
+.imageAndForm .contactform button {
     width: 100%;
     padding: 5px;
     border-radius: 10px;
-    
+
 }
+
 .imageAndForm .contactform h3,
 .whyUs h3,
-footer h3{
+footer h3 {
     font-size: 25px;
     position: relative;
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
+
 .imageAndForm .contactform h3::after,
 .whyUs h3::after,
-footer h3::after{
+footer h3::after {
     content: '';
     position: absolute;
     height: 5px;
@@ -463,29 +528,33 @@ footer h3::after{
     bottom: -10px;
     left: 0;
 }
+
 footer .content ul {
     padding: 0 20px;
-      /* height: 100%; */
+    /* height: 100%; */
     /* background-color: red; */
 }
-footer .content ul li{
+
+footer .content ul li {
     font-size: 14px;
-  
+
     font-weight: lighter;
     margin-top: 5px;
 }
 
-footer .content ul:not(.contactInfo) li::marker{
+footer .content ul:not(.contactInfo) li::marker {
     content: '✓ ';
 }
-footer .content .contactInfo{
+
+footer .content .contactInfo {
     display: flex;
     flex-direction: column;
     gap: 5px;
     list-style-type: none;
     padding: 0;
 }
-footer .content .contactInfo span{
+
+footer .content .contactInfo span {
     width: 30px;
     height: 30px;
     background-color: var(--primaryColor);
@@ -493,22 +562,27 @@ footer .content .contactInfo span{
     align-content: center;
     text-align: center;
 }
-footer .content .contactInfo li{
+
+footer .content .contactInfo li {
     font-size: 16px;
     align-content: center;
 }
-footer .content .contactInfo li:last-child{
+
+footer .content .contactInfo li:last-child {
     margin-bottom: 20px;
 }
-footer .content  form{
+
+footer .content form {
     display: flex;
     gap: 15px;
 }
-footer .content  form button{
+
+footer .content form button {
     padding: 0 10px;
     border-radius: 15px;
 }
-footer .content  form input{
+
+footer .content form input {
     padding: 0 10px;
     border-radius: 15px;
     width: 100%;
@@ -516,17 +590,20 @@ footer .content  form input{
     background-color: transparent;
     border: 1px solid var(--wte);
 }
+
 .aboutUs {
     display: flex;
 }
-.whyUs{
-   width: 100%;
+
+.whyUs {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 15px;
 }
-.whyUs .item{
+
+.whyUs .item {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--silver);
@@ -536,14 +613,16 @@ footer .content  form input{
     flex-direction: column;
     gap: 10px;
 }
-.whyUs .item:has(span.icon){
-display: flex;
-justify-content: center;
-align-items: center;
+
+.whyUs .item:has(span.icon) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     align-items: center;
 }
-.whyUs .item .icon{
+
+.whyUs .item .icon {
     color: white;
     background-color: var(--primaryColor);
     width: 45px;
@@ -552,13 +631,15 @@ align-items: center;
     height: 45px;
     border-radius: 50%;
 }
-.whyUs .item:first-child{
+
+.whyUs .item:first-child {
     box-shadow: none;
     border: none;
     /* width: 1fr; */
     grid-column: span 2 / span 2;
 }
-.whyUs .item p{
+
+.whyUs .item p {
     opacity: 0.5;
     font-size: 0.9em;
 }
