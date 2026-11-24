@@ -396,11 +396,14 @@ footer .content .socialmediaicons li{
     border-radius: 10px;
     max-height: 450px;
 }
-.aboutUs .content *{
-    margin-top: 10px;
+.aboutUs .content p{
+    margin: 10px 0;
+    text-align: justify;
 }
 .aboutUs .content button{
-    
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 .imageAndForm .contactform {
     /* min-width: 400PX; */
