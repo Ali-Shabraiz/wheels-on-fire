@@ -277,6 +277,7 @@ nav .buttons button {
 
 .contactDetails {
     gap: 20px;
+    height: 200px;
 }
 
 .contactDetails .item {
