@@ -35,7 +35,7 @@ input:focus,textarea:focus{
     background-repeat: no-repeat;
     background-position: center;
 }
-.main.contactPage{
+.main.h-max-content{
     height: max-content;
 }
 
@@ -383,6 +383,7 @@ footer .content .socialmediaicons li{
     background-color: var(--wte);
     border-radius: 50%;
 }
+.aboutUs,
 .imageAndForm {
     display: flex;
     gap: 20px;
@@ -390,9 +391,16 @@ footer .content .socialmediaicons li{
     position: relative;
     width: 100%;
 }
+.aboutUs img,
 .imageAndForm img{
     border-radius: 10px;
     max-height: 450px;
+}
+.aboutUs .content *{
+    margin-top: 10px;
+}
+.aboutUs .content button{
+    
 }
 .imageAndForm .contactform {
     /* min-width: 400PX; */
@@ -502,4 +510,7 @@ footer .content  form input{
     height: 35px;
     background-color: transparent;
     border: 1px solid var(--wte);
+}
+.aboutUs {
+    display: flex;
 }
