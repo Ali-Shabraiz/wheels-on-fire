@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-
+::selection{
+    background-color: var(--primaryColora);
+}
 :root {
     --primaryColor: #E60000;
     --wte: #fff;
@@ -18,6 +20,9 @@ input:focus,textarea:focus{
     border-color: var(--silver);
     outline-color: var(--silver);
 }
+.primarColored{
+    color: var(--primaryColor);
+}
 
 
 .main {
@@ -30,6 +35,10 @@ input:focus,textarea:focus{
     background-repeat: no-repeat;
     background-position: center;
 }
+.main.contactPage{
+    height: max-content;
+}
+
 
 /* HERO SECTION STARTING FROM HERE */
 
@@ -43,7 +52,7 @@ input:focus,textarea:focus{
 
 .hero-section .content {
     height: 100%;
-    padding: 150px 50px;
+    padding: 120px 50px 100px;
     /* display: flex; */
     /* flex-direction: c; */
 }
@@ -56,6 +65,8 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 6px;
+    margin-top: 20px;
+    
 }
 .freturedProducts .item h3::after,
 h2::after {
