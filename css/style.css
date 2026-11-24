@@ -676,7 +676,10 @@ footer .content form input {
     gap: 20px;
 }
 .motivation .col .icon{
-    font-size: 3em;
+    font-size: 6em;
+    /* background-color: red; */
+
+    aspect-ratio: 1;
     color: var(--primaryColor);
 }
 
