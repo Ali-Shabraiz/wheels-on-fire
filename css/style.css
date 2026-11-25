@@ -712,8 +712,19 @@ footer .content form input {
     grid-column-start: 6;
 }
          */
-
-
+.inventory{
+    display: flex;
+    gap: 20px;
+}
+aside.filterBar{
+    min-width: 300px;
+    max-height: 500px;
+    border-radius: 10px;
+    position: sticky;
+    top: 120px;
+    /* aspect-ratio: 2/3; */
+    background-color: var(--silver);
+}
 /* Responsive header and hero */
 @media (max-width: 1200px) {
     nav {
