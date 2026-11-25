@@ -714,16 +714,149 @@ footer .content form input {
          */
 .inventory{
     display: flex;
+    align-items: flex-start;
     gap: 20px;
 }
-aside.filterBar{
-    min-width: 300px;
-    max-height: 500px;
-    border-radius: 10px;
+.inventory .filterBar{
+    flex: 0 0 270px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding: 22px;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    background-color: var(--wte);
+    box-shadow: 0 8px 28px rgba(10, 10, 12, 0.08);
     position: sticky;
     top: 120px;
-    /* aspect-ratio: 2/3; */
-    background-color: var(--silver);
+}
+.filterBar-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 18px;
+}
+.filterBar-eyebrow{
+    color: #777B84;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.filterBar-heading h2{
+    margin-top: 5px;
+    color: var(--blk);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+}
+.filterBar-heading h2::after{
+    display: none;
+}
+.filter-reset{
+    padding: 6px 0;
+    border: 0;
+    background: transparent;
+    color: var(--primaryColor);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.filter-search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 12px;
+    border: 1px solid #E5E7EB;
+    border-radius: 7px;
+    color: #777B84;
+}
+.filter-search .fa-search{
+    color: #777B84;
+    font-size: 13px;
+}
+.filter-search input{
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--blk);
+    font-size: 12px;
+}
+.filter-group{
+    display: grid;
+    gap: 11px;
+    margin: 0;
+    padding: 18px 0;
+    border: 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+.filter-group legend{
+    float: left;
+    width: 100%;
+    margin-bottom: 1px;
+    color: var(--blk);
+    font-size: 13px;
+    font-weight: 700;
+}
+.filter-option{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #555963;
+    font-size: 12px;
+    cursor: pointer;
+}
+.filter-option input{
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: var(--primaryColor);
+}
+.filter-price{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+.filter-price label{
+    display: grid;
+    gap: 6px;
+    color: #777B84;
+    font-size: 10px;
+}
+.filter-price input{
+    width: 100%;
+    min-width: 0;
+    height: 36px;
+    padding: 0 8px;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    color: var(--blk);
+    font-size: 11px;
+}
+.filter-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 42px;
+    margin-top: 18px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--primaryColor);
+    color: var(--wte);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.inventory .freturedProducts{
+    flex: 1;
+    min-width: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 /* Responsive header and hero */
 @media (max-width: 1200px) {
@@ -784,6 +917,10 @@ aside.filterBar{
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
         gap: 30px;
+    }
+
+    .inventory .freturedProducts{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .aboutUs {
@@ -908,6 +1045,16 @@ aside.filterBar{
         line-height: 1.5;
     }
 
+    .inventory{
+        flex-direction: column;
+    }
+
+    .inventory .filterBar{
+        position: static;
+        width: 100%;
+        max-height: none;
+    }
+
     .freturedProducts {
         gap: 24px;
     }
@@ -995,6 +1142,10 @@ aside.filterBar{
         grid-template-rows: auto;
         gap: 28px;
         padding: 10px 20px 30px;
+    }
+
+    .inventory .freturedProducts{
+        grid-template-columns: 1fr;
     }
 
     .freturedProducts .item img {
