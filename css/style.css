@@ -113,16 +113,6 @@ h1.hero-heading {
     font-size: 1.1em;
 }
 
-.hero-section img {
-    width: 550px;
-    right: 150px;
-    margin-top: 150px;
-    align-self: center;
-    /* margin-top: 100px; */
-    position: absolute;
-    /* background-color: red; */
-    /* margin-right: 50px; */
-}
 
 .hero-section .content .buttons {
     display: flex;
@@ -980,6 +970,12 @@ footer .content form input {
 
     .main {
         background-position: 58% center;
+        background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)),
+        url("../assets/site/mobile-hero.png");
+        
+    }
+    .hero-section .content{
+        justify-content: flex-start !important;
     }
 
     nav {
