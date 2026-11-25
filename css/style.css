@@ -132,33 +132,49 @@ h1.hero-heading {
 }
 
 .hero-section .content .buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     border-radius: 30px;
     border: none;
     background: transparent;
     color: var(--wte);
-    /* border: none; */
-    height: 40px;
-
-    padding: 0 20px;
-    font-weight: 700;
-    font-size: 1.3em;
-    width: max-content;
+    height: 48px;
+    padding: 0 24px;
     font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    width: max-content;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .hero-section .content .buttons button:nth-child(2) .fa {
-    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
     border-radius: 50%;
-    width: 40px;
+    width: 36px;
     font-size: 16px;
     aspect-ratio: 1;
-    /* background-color: red; */
     border: 1px solid var(--wte);
-    align-content: center;
-    text-align: center;
-    margin-right: 5px;
+    margin-right: 0;
+}
 
+.hero-section .content .buttons .primaryColorButton:hover {
+    background-color: #c90000 !important;
+    transform: translateY(-2px);
+}
 
+.hero-section .content .buttons button:nth-child(2):hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.hero-section .content .buttons button:focus-visible {
+    outline: 2px solid var(--wte);
+    outline-offset: 3px;
 }
 
 .primaryColorButton {
