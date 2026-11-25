@@ -612,6 +612,20 @@ footer .content form input {
 .aboutUs {
     display: flex;
 }
+
+.aboutUs .content {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.aboutUs img {
+    flex: 0 1 44%;
+    width: 44%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
 .achievements,
 .whyUs,
 .servicesGrid {
@@ -701,6 +715,8 @@ footer .content form input {
 }
 .motivation .col{
     display: flex;
+    flex: 1 1 0;
+    min-width: 0;
     box-shadow: 0 0 10px var(--silver);
     border: 2px solid var(--silver);
     border-radius: 10px;
@@ -713,6 +729,10 @@ footer .content form input {
     /* background-color: red; */
     aspect-ratio: 1;
     color: var(--primaryColor);
+}
+
+.motivation .col .content {
+    min-width: 0;
 }
 
 
@@ -945,14 +965,31 @@ footer .content form input {
     }
 
     .aboutUs {
+        gap: 32px;
         align-items: center;
     }
 
+    .aboutUs .content {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
     .aboutUs img {
+        flex: 0 1 42%;
         width: 42%;
         height: auto;
         max-height: 380px;
+        aspect-ratio: 4 / 3;
         object-fit: cover;
+    }
+
+    .motivation .col {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .motivation .col .icon {
+        font-size: clamp(3.5rem, 6vw, 5rem);
     }
 
     .whyUs,
@@ -1102,14 +1139,21 @@ footer .content form input {
     }
 
     .aboutUs .content {
+        flex: 0 0 auto;
         width: 100%;
     }
 
     .aboutUs img {
+        flex: 0 0 auto;
         width: 100%;
         max-height: none;
         aspect-ratio: 16 / 10;
         object-fit: cover;
+    }
+
+    .motivation .col .icon {
+        flex: 0 0 auto;
+        font-size: clamp(3rem, 10vw, 4.5rem);
     }
 
     .motivation {
@@ -1117,6 +1161,7 @@ footer .content form input {
     }
 
     .motivation .col {
+        flex: 0 1 auto;
         width: 100%;
     }
 }
