@@ -616,15 +616,20 @@ footer .content form input {
     display: flex;
 }
 .achievements,
-.whyUs {
+.whyUs,
+.servicesGrid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 15px;
 }
+.servicesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .achievements .item,
-.whyUs .item {
+.whyUs .item,
+.servicesGrid .item {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--silver);
@@ -635,7 +640,8 @@ footer .content form input {
     gap: 10px;
 }
 .achievements .item:has(h4),
-.whyUs .item:has(span.icon) {
+.whyUs .item:has(span.icon),
+.servicesGrid .item:has(span.icon) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -643,7 +649,8 @@ footer .content form input {
     align-items: center;
 }
 
-.whyUs .item .icon {
+.whyUs .item .icon,
+.servicesGrid .item .icon {
     color: white;
     background-color: var(--primaryColor);
     width: 45px;
@@ -660,7 +667,8 @@ footer .content form input {
     grid-column: span 2 / span 2;
 }
 
-.whyUs .item p {
+.whyUs .item p,
+.servicesGrid .item p {
     opacity: 0.5;
     font-size: 0.9em;
 }
@@ -951,7 +959,8 @@ footer .content form input {
     }
 
     .whyUs,
-    .achievements {
+    .achievements,
+    .servicesGrid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
     }
@@ -1220,7 +1229,8 @@ footer .content form input {
     }
 
     .whyUs,
-    .achievements {
+    .achievements,
+    .servicesGrid {
         grid-template-columns: 1fr;
     }
 
