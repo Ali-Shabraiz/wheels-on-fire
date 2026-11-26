@@ -11,7 +11,7 @@
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Wheels on Fire</title>
+    <title>La Ferrari | Wheels on Fire</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -20,14 +20,15 @@
         <header>
             <nav>
                 <img src="../assets/site/logo.png" class="logo" alt="Logo for Wheels on fire">
-                <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="primary-navigation">
                     <span class="fa fa-bars" aria-hidden="true"></span>
                 </button>
                 <ul id="primary-navigation">
-                    <li><a href= "../index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="../about/index.html">About Us</a></li>
-                    <li><a href ="../inventory/index.html">Inventory </a>  </li>
-                    <li class="active"><a href="../services/index.html">Services</a></li>
+                    <li><a href="../inventory/index.html">Inventory </a> </li>
+                    <li class="active"><a href="../cardetail/index.html">Model</a></li>
                     <li><a href="../cars/index.html">Cars</a></li>
                     <li><a href="../contact/index.html">Contact</a></li>
                 </ul>
@@ -43,49 +44,149 @@
         </header>
         <section class="hero-section carDetail">
             <div class="content">
-                <!-- <h2>Our Services</h2>
-                <h1 class="hero-heading">Premium Care. <br> <span class="primarColored">Tailored</span> to You.
-                </h1>
-                <p>From finding your ideal car to personalized purchasing support, <br>we make every step clear, comfortable, and rewarding.</p>
-                <div class="buttons">
-                    <button class="primaryColorButton">Explore Collection <span class="fa fa-arrow-right"></span></button>
-                    <button><span class="fa fa-play"></span> Watch Intro</button>
-                </div> -->
-                <h3 style="color: var(--blk);">La Ferrari Fah Fah</h3>
-                <span class="subtitle">CAR INFO SOMME</span>
-                
-                <img src="../assets/cars/Gemini_Generated_Image_4s2yp4s2yp4s2yp4-removebg-preview-Picsart-AiImageEnhancer.png" alt="">
-                <aside class="propertiesOfCars">
+                <div class="car-detail-heading">
+                    <span class="subtitle">2023 / FERRARI / HYBRID</span>
+                    <h1>La <span>Ferrari</span></h1>
+                    <div class="car-price">
+                        <strong>$4,500,000</strong>
+                        <span>Available for inquiry</span>
+                    </div>
+                </div>
+
+                <img class="car-detail-image"
+                    src="../assets/cars/Gemini_Generated_Image_4s2yp4s2yp4s2yp4-removebg-preview-Picsart-AiImageEnhancer.png"
+                    alt="Red La Ferrari">
+
+                <aside class="propertiesOfCars" aria-label="Vehicle categories">
                     <ul>
+                        <li class="active">Overview</li>
                         <li>Performance</li>
-                        <li>Performance</li>
-                        <li>Performance</li>
-                        <li class="active">Performance</li>
-                        <li>Performance</li>
-                        <li>Performance</li>
+                        <li>Interior</li>
+                        <li>Technology</li>
+                        <li>Safety</li>
+                        <li>Gallery</li>
                     </ul>
                 </aside>
-                   <ul class="colorBox">
-                        <li class="circle" style="--clr: red;"></li>
-                        <li class="circle" style="--clr: black;"></li>
-                        <li class="circle" style="--clr: yellow;"></li>
-                        <li class="circle" style="--clr: blue;"></li>
-                    </ul>
-                <ul class="carInfoScrollAble">
-                 
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                </ul>
 
+                <div class="colorBox" aria-label="Available exterior colors">
+                    <span>Color</span>
+                    <button class="circle active" type="button" style="--clr: #cf0707;" aria-label="Rosso Corsa"></button>
+                    <button class="circle" type="button" style="--clr: #0b0b0b;" aria-label="Black"></button>
+                    <button class="circle" type="button" style="--clr: #f2bf20;" aria-label="Giallo Modena"></button>
+                    <button class="circle" type="button" style="--clr: #143b78;" aria-label="Blu Pozzi"></button>
+                </div>
+
+                <ul class="carInfoScrollAble" aria-label="Key specifications">
+                    <li>
+                        <span class="fa fa-users"></span>
+                        <span class="bottom">
+                            <span>
+                                <span class="light">Passenger</span><br>
+                                <span class="highLighted">2 Seats</span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="fa fa-gauge-high"></span>
+                        <span class="bottom">
+                            <span>
+                                <span class="light">Top speed</span><br>
+                                <span class="highLighted">350 km/h</span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="fa fa-bolt"></span>
+                        <span class="bottom">
+                            <span>
+                                <span class="light">Power</span><br>
+                                <span class="highLighted">949 hp</span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="fa fa-stopwatch"></span>
+                        <span class="bottom">
+                            <span>
+                                <span class="light">0-100 km/h</span><br>
+                                <span class="highLighted">2.6 Seconds</span>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="fa fa-gears"></span>
+                        <span class="bottom">
+                            <span>
+                                <span class="light">Transmission</span><br>
+                                <span class="highLighted">7-Speed DCT</span>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
 
-    
+    <main class="car-detail-content">
+        <section class="detail-overview">
+            <div>
+                <span class="detail-eyebrow">Vehicle overview</span>
+                <h2>Engineered for the Extraordinary</h2>
+            </div>
+            <p>La Ferrari combines a naturally aspirated V12 with an advanced HY-KERS hybrid system. Its carbon-fibre
+                structure, active aerodynamics and race-derived controls deliver exceptional speed with precise,
+                responsive handling.</p>
+        </section>
+
+        <section class="detail-specs" aria-labelledby="specifications-heading">
+            <div class="detail-section-heading">
+                <span class="detail-eyebrow">Technical details</span>
+                <h2 id="specifications-heading">Specifications</h2>
+            </div>
+            <div class="spec-grid">
+                <dl>
+                    <div><dt>Make</dt><dd>Ferrari</dd></div>
+                    <div><dt>Model</dt><dd>La Ferrari</dd></div>
+                    <div><dt>Year</dt><dd>2023</dd></div>
+                    <div><dt>Body style</dt><dd>Two-door coupe</dd></div>
+                </dl>
+                <dl>
+                    <div><dt>Engine</dt><dd>6.3L V12 + HY-KERS</dd></div>
+                    <div><dt>Displacement</dt><dd>6,262 cc</dd></div>
+                    <div><dt>Drivetrain</dt><dd>Rear-wheel drive</dd></div>
+                    <div><dt>Fuel type</dt><dd>Petrol hybrid</dd></div>
+                </dl>
+                <dl>
+                    <div><dt>Maximum power</dt><dd>949 hp</dd></div>
+                    <div><dt>Maximum torque</dt><dd>900 Nm</dd></div>
+                    <div><dt>Transmission</dt><dd>7-speed automatic</dd></div>
+                    <div><dt>Doors</dt><dd>2</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="detail-features">
+            <div class="detail-section-heading">
+                <span class="detail-eyebrow">Key highlights</span>
+                <h2>Features &amp; Equipment</h2>
+            </div>
+            <div class="feature-grid">
+                <article><span class="fa fa-wind"></span><h3>Active Aerodynamics</h3><p>Adaptive bodywork balances downforce and low drag at every speed.</p></article>
+                <article><span class="fa fa-layer-group"></span><h3>Carbon Monocoque</h3><p>A rigid lightweight chassis delivers exceptional driver feedback.</p></article>
+                <article><span class="fa fa-shield-halved"></span><h3>Dynamic Control</h3><p>Race-derived stability and traction systems adapt to road conditions.</p></article>
+                <article><span class="fa fa-gem"></span><h3>Bespoke Interior</h3><p>Driver-focused controls and premium materials create a purposeful cabin.</p></article>
+            </div>
+        </section>
+
+        <section class="detail-cta">
+            <div>
+                <span class="detail-eyebrow">Own this icon</span>
+                <h2>Arrange a private viewing</h2>
+            </div>
+            <a class="primaryColorButton" href="../contact/index.html">Contact an advisor <span class="fa fa-arrow-right"></span></a>
+        </section>
+    </main>
+
 
     <script src="../js/main.js"></script>
 </body>

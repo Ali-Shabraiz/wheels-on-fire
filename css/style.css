@@ -119,10 +119,40 @@ textarea:focus {
 .carDetail .carInfoScrollAble::-webkit-scrollbar{
     height: 0;
 }
+.carDetail .carInfoScrollAble li .fa{
+    width: 35px;
+    height: 35px;
+    background-color: hsla(0, 0%, 0%, 0.178);
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+}
+.carDetail .carInfoScrollAble li .highLighted{
+    font-size: 1em;
+    font-weight: 400;
+    color: var(-blk);
+
+}
+.carDetail .carInfoScrollAble li .light{
+    color: var(-blk);
+    font-weight: 200;
+    opacity: 0.5;
+
+}
+.carDetail .carInfoScrollAble li .bottom{
+    position: absolute;
+    bottom: 10px;
+}
+
+.carDetail .carInfoScrollAble li .right{
+    right: 10px;
+    position: absolute;
+}
 .carDetail .carInfoScrollAble li{
     min-width: 250px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
+    position: relative;
     box-shadow: 0 0 10px var(--silver);
     height: 120px;
     /* background-color: var(--silver); */
@@ -134,6 +164,255 @@ textarea:focus {
     font-size: 1em;
 
 
+}
+
+.carDetail .content {
+    position: relative;
+    width: 100%;
+    padding-top: 110px;
+}
+
+.car-detail-heading {
+    position: absolute;
+    left: 50px;
+    top: 125px;
+    z-index: 12;
+}
+
+.car-detail-heading h1 {
+    color: var(--blk);
+    font-size: clamp(54px, 7vw, 92px);
+    margin: 8px 0 12px;
+    text-transform: uppercase;
+}
+
+.car-detail-heading h1 span {
+    color: var(--primaryColor);
+}
+
+.car-detail-heading .subtitle {
+    display: block;
+    color: var(--primaryColor);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.car-price {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.car-price strong {
+    color: var(--primaryColor);
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+}
+
+.car-price span {
+    color: #777;
+    font-size: 13px;
+}
+
+.carDetail .car-detail-image {
+    width: min(58vw, 820px);
+    max-height: 58vh;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.carDetail .propertiesOfCars {
+    position: absolute;
+    right: 40px;
+    top: 140px;
+}
+
+.carDetail .propertiesOfCars ul {
+    max-height: 360px;
+}
+
+.carDetail .colorBox {
+    align-items: center;
+    bottom: 175px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.carDetail .colorBox > span {
+    color: var(--blk);
+    font-size: 12px;
+    font-weight: 800;
+    margin-right: 4px;
+    text-transform: uppercase;
+}
+
+.carDetail .colorBox .circle {
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.carDetail .colorBox .circle.active {
+    border-color: var(--blk);
+    box-shadow: 0 0 0 2px var(--wte) inset;
+}
+
+.carDetail .carInfoScrollAble {
+    z-index: 10;
+    left: 50px;
+    width: calc(100% - 100px);
+}
+
+.carDetail .carInfoScrollAble li {
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.car-detail-content {
+    padding: 70px 50px;
+}
+
+.detail-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+.detail-eyebrow {
+    color: var(--primaryColor);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.detail-overview h2,
+.detail-specs h2,
+.detail-features h2,
+.detail-cta h2 {
+    color: var(--blk);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(34px, 4vw, 52px);
+    margin-top: 10px;
+}
+
+.detail-overview p {
+    color: #686868;
+    line-height: 1.8;
+}
+
+.detail-specs,
+.detail-features {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+.detail-section-heading {
+    margin-bottom: 30px;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #e7e7e7;
+    border-radius: 14px;
+}
+
+.spec-grid dl {
+    padding: 20px 28px;
+}
+
+.spec-grid dl + dl {
+    border-left: 1px solid #e7e7e7;
+}
+
+.spec-grid dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.spec-grid dl div:last-child {
+    border-bottom: none;
+}
+
+.spec-grid dt {
+    color: #888;
+}
+
+.spec-grid dd {
+    color: var(--blk);
+    font-weight: 700;
+    text-align: right;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.feature-grid article {
+    min-height: 220px;
+    padding: 28px;
+    border: 1px solid #e7e7e7;
+    border-radius: 14px;
+}
+
+.feature-grid article > .fa {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primaryColor);
+    color: var(--wte);
+    font-size: 18px;
+}
+
+.feature-grid h3 {
+    margin: 24px 0 10px;
+    color: var(--blk);
+    font-size: 18px;
+}
+
+.feature-grid h3::after {
+    display: none;
+}
+
+.feature-grid p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.detail-cta {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 14px;
+    background: #f3f3f3;
+}
+
+.detail-cta h2 {
+    font-size: clamp(28px, 3vw, 42px);
+}
+
+.detail-cta .primaryColorButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 
