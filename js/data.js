@@ -8,6 +8,7 @@ const carsData = [
         price: 2000,
         imgSrc: 'Gemini_Generated_Image_6tkwb56tkwb56tkw.jpg',
         imgAlt: 'Dummy ALT TExt',
+        featured: true
     },
     {
         name: 'Bugatti Chiron',
@@ -18,6 +19,8 @@ const carsData = [
         price: 2000,
         imgSrc: 'Gemini_Generated_Image_6tkwb56tkwb56tkw.jpg',
         imgAlt: 'Dummy ALT TExt',
+        featured: true
+
 
     },
     {
@@ -29,6 +32,8 @@ const carsData = [
         price: 2000,
         imgSrc: 'Gemini_Generated_Image_6tkwb56tkwb56tkw.jpg',
         imgAlt: 'Dummy ALT TExt',
+        featured: true
+
 
     },
     {
@@ -40,5 +45,7 @@ const carsData = [
         price: 2000,
         imgSrc: 'Gemini_Generated_Image_6tkwb56tkwb56tkw.jpg',
         imgAlt: 'Dummy ALT TExt',
+        featured: true
+
     }
 ];

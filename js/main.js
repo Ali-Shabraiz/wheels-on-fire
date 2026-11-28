@@ -46,13 +46,13 @@ document.querySelectorAll("nav").forEach((nav) => {
         }
     });
 });
-function displayCarCards(data){
+function displayCarCards(data,base = '../'){
     var container = document.getElementById('cardContainer');
     data.forEach(car => {
         var cardItem = document.createElement('div');
         cardItem.classList.add('item');
         cardItem.innerHTML = `
-             <img src="../assets/cars/${car.imgSrc}" alt="${car.imgAlt}">
+             <img src="${base}assets/cars/${car.imgSrc}" alt="${car.imgAlt}">
             <h3>${car.name}</h3>
             <div class="carDetails">
                 <span class="fa fa-calendar"></span>
