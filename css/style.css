@@ -1280,6 +1280,14 @@ footer .content form input {
     min-width: 0;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.filter-empty{
+    grid-column: 1 / -1;
+    padding: 48px 20px;
+    border: 1px dashed #D5D7DC;
+    border-radius: 12px;
+    color: #777B84;
+    text-align: center;
+}
 /* Responsive header and hero */
 @media (max-width: 1200px) {
     nav {

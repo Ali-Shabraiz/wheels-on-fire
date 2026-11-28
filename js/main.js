@@ -48,6 +48,14 @@ document.querySelectorAll("nav").forEach((nav) => {
 });
 function displayCarCards(data,base = '../'){
     var container = document.getElementById('cardContainer');
+    if (!container) return;
+    container.replaceChildren();
+
+    if (!data.length) {
+        container.innerHTML = '<p class="filter-empty">No cars match your filters.</p>';
+        return;
+    }
+
     data.forEach(car => {
         var cardItem = document.createElement('div');
         cardItem.classList.add('item');
@@ -70,8 +78,50 @@ function displayCarCards(data,base = '../'){
             </div>
         `;
         container.appendChild(cardItem);
-    })
+    });
 }
+
+function initInventoryFilters() {
+    const form = document.getElementById('inventory-filters');
+    const container = document.getElementById('cardContainer');
+    if (!form || !container || typeof carsData === 'undefined') return;
+
+    const applyFilters = () => {
+        const formData = new FormData(form);
+        const query = String(formData.get('search') || '').trim().toLowerCase();
+        const minPrice = Number(formData.get('min-price')) || 0;
+        const maxPriceValue = formData.get('max-price');
+        const maxPrice = maxPriceValue ? Number(maxPriceValue) : Infinity;
+        const makes = formData.getAll('make').map(value => value.toLowerCase());
+        const transmissions = formData.getAll('transmission').map(value => value.toLowerCase());
+        const fuels = formData.getAll('fuel').map(value => value.toLowerCase());
+
+        const filteredCars = carsData.filter(car => {
+            const searchable = `${car.make} ${car.name}`.toLowerCase();
+            return (!query || searchable.includes(query))
+                && car.price >= minPrice
+                && car.price <= maxPrice
+                && (!makes.length || makes.includes(String(car.make).toLowerCase()))
+                && (!transmissions.length || transmissions.includes(String(car.transmission).toLowerCase()))
+                && (!fuels.length || fuels.includes(String(car.fuel).toLowerCase()));
+        });
+
+        displayCarCards(filteredCars);
+    };
+
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        applyFilters();
+    });
+
+    form.addEventListener('input', applyFilters);
+    form.addEventListener('change', applyFilters);
+    form.addEventListener('reset', () => {
+        window.requestAnimationFrame(() => applyFilters());
+    });
+}
+
+initInventoryFilters();
 // document.querySelectorAll(".propertiesOfCars li").forEach((item) => {
 //     item.addEventListener("click", () => {
 //         item.parentElement.querySelectorAll("li").forEach((option) => option.classList.remove("active"));
