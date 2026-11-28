@@ -46,3 +46,42 @@ document.querySelectorAll("nav").forEach((nav) => {
         }
     });
 });
+function displayCarCards(data){
+    var container = document.getElementById('cardContainer');
+    data.forEach(car => {
+        var cardItem = document.createElement('div');
+        cardItem.classList.add('item');
+        cardItem.innerHTML = `
+             <img src="../assets/cars/${car.imgSrc}" alt="${car.imgAlt}">
+            <h3>${car.name}</h3>
+            <div class="carDetails">
+                <span class="fa fa-calendar"></span>
+                ${car.yearMade}
+                <span class="fa fa-gears"></span>
+                ${car.transmission}
+                <span class="fa fa-gas-pump"></span>
+                ${car.fuelCapacity}L
+                <span class="fa fa-gauge-high"></span>
+                ${car.power}CC
+            </div>
+            <div class="flex-box">
+                <strong>${car.price.toLocaleString("en-US")}</strong>
+                <button class="fa fa-arrow-right"></button>
+            </div>
+        `;
+        container.appendChild(cardItem);
+    })
+}
+// document.querySelectorAll(".propertiesOfCars li").forEach((item) => {
+//     item.addEventListener("click", () => {
+//         item.parentElement.querySelectorAll("li").forEach((option) => option.classList.remove("active"));
+//         item.classList.add("active");
+//     });
+// });
+
+// document.querySelectorAll(".colorBox .circle").forEach((swatch) => {
+//     swatch.addEventListener("click", () => {
+//         swatch.parentElement.querySelectorAll(".circle").forEach((option) => option.classList.remove("active"));
+//         swatch.classList.add("active");
+//     });
+// });
